@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/_5mdp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userPic"
+        android:layout_width="@dimen/_50mdp"
+        android:layout_height="@dimen/_50mdp"
+        android:padding="3dp"
+        android:src="@drawable/vivek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/UserNameS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:layout_marginStart="@dimen/_5mdp"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/userPic"
+        app:layout_constraintStart_toEndOf="@+id/userPic"
+        app:layout_constraintTop_toTopOf="@+id/userPic" />
+
+    <Button
+        android:id="@+id/followS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="follow"
+        android:backgroundTint="#0005FF"
+        android:layout_marginEnd="@dimen/_10mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userPic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

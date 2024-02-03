@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.comment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/post"
+                android:layout_width="wrap_content"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/vivek"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view01"
+                android:layout_width="@dimen/_42mdp"
+                android:layout_height="@dimen/_42mdp"
+                android:background="@drawable/white"
+                app:layout_constraintBottom_toBottomOf="@id/postPic"
+                app:layout_constraintEnd_toEndOf="@+id/postPic"
+                app:layout_constraintStart_toStartOf="@+id/postPic"
+                app:layout_constraintTop_toTopOf="@id/postPic" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/whitecorner"
+                android:padding="4dp"
+                android:textSize="14sp"
+                android:text="Username"
+                app:layout_constraintBottom_toBottomOf="@+id/postPic"
+                app:layout_constraintStart_toEndOf="@+id/postPic"
+                app:layout_constraintTop_toTopOf="@+id/postPic" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/postPic"
+                android:layout_width="@dimen/_35mdp"
+                android:layout_height="@dimen/_35mdp"
+                android:layout_margin="18dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:src="@drawable/vivek"
+                app:layout_constraintBottom_toBottomOf="@id/post"
+                app:layout_constraintStart_toStartOf="@id/post"
+                app:layout_constraintVertical_bias="0.868" />
+
+            <TextView
+                android:id="@+id/descriptionC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:maxLines="4"
+                android:padding="8dp"
+                android:text="Description should be here"
+                app:layout_constraintStart_toStartOf="@+id/post"
+                app:layout_constraintTop_toBottomOf="@+id/post" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:text="Comments"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentSectionC"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_400mdp"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionC" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardElevation="5dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/writeComment"
+                android:layout_width="@dimen/_230mdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbg"
+                android:cursorVisible="true"
+                android:layout_gravity="center"
+                android:maxWidth="@dimen/_250mdp"
+                android:hint="Write to comment here..."
+                android:maxLines="5"/>
+
+            <ImageView
+                android:id="@+id/postComment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/share" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
